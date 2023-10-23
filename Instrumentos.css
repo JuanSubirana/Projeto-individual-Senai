@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size: 62,5%; */
+}
+
+html {
+    background-color: rgb(255, 255, 255);
+}
+
+
+.menu {
+    background-color: rgb(48, 46, 46);
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    left: 1rem;
+    
+}
+/* cadeia de hierarquia para chamar  uma tag especifica dentro de outra tag com classe */
+.menu ul {
+    display: flex;
+    padding: 1.5rem;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* tira as linhas que ficam abaixo dos links */
+    font-size: 1.4 rem;
+    position: relative;
+    padding: 0 5rem .5rem 0;
+     
+}
+
+.menu a::after { /* abreviação de caminho, chama o link que esta dentro do menu e os 2 pontos duplos chama um pseudoelemento */
+    content: "";
+    width: 0%; /* zerou para usar os 100% na interação do mouse com o componente */
+    height: .2rem;
+    background:linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;  /* timming da "animação" da barra em baixo do componente */
+    
+}  
+
+/*  hover é usando para quando passar o mouse em cima do componente eo ::after é para interagir com o pseudoelemento */
+.menu a:hover::after { 
+    width: 50%;
+}
+.pesquisa{
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* tira as linhas que ficam abaixo dos links */
+    font-size: 1.4 rem;
+    position: relative;
+    padding: 0 5rem .5rem 0;
+}
+
+.flaming   {
+   
+    margin-top: -4.2rem;
+    text-decoration: none;
+    color: none;
+    transition: none;
+    
+    background:linear-gradient(none);
+}
+
+.menu .flaming::after {
+    text-decoration: none;
+    color: none;
+    transition: none;
+    
+    background:linear-gradient(none);
+}
+
+.menu .flaming:hover::after  {
+    text-decoration: none;
+    color: none;
+    transition: none;
+    background:none;
+}
+
+main a {
+    text-decoration: none;
+}
+
+.footer{
+    width: 45vw;
+    height: 40vh;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -3rem;
+    /* margin-left: 12rem; */
+   /*  padding-right: 3rem;
+    padding-top: -18rem; */
+    text-decoration: none;
+    
+}
+ .contato {
+  
+  margin-left: 6rem;
+  margin-top: 20.5rem;
+
+}
+
+.fabricante {
+    
+    align-items: flex-start; 
+    position: relative;
+    margin-top: -5.4rem;
+     margin-left: 58rem;
+    
+}  
+
+footer h2 {
+    font-size: 1.9rem;
+}
+
+footer section ul {
+    margin-left: 2.5rem;
+}

@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size: 62,5%; */
+}
+
+html {
+    background-color: rgb(255, 255, 255);
+}
+
+
+.menu {
+    background-color: rgb(48, 46, 46);
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    left: 1rem;
+    
+}
+/* cadeia de hierarquia para chamar  uma tag especifica dentro de outra tag com classe */
+.menu ul {
+    display: flex;
+    padding: 1.5rem;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* tira as linhas que ficam abaixo dos links */
+    font-size: 1.4 rem;
+    position: relative;
+    padding: 0 5rem .5rem 0;
+     
+}
+
+.menu a::after { /* abreviação de caminho, chama o link que esta dentro do menu e os 2 pontos duplos chama um pseudoelemento */
+    content: "";
+    width: 0%; /* zerou para usar os 100% na interação do mouse com o componente */
+    height: .2rem;
+    background:linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;  /* timming da "animação" da barra em baixo do componente */
+    
+}  
+
+/*  hover é usando para quando passar o mouse em cima do componente eo ::after é para interagir com o pseudoelemento */
+.menu a:hover::after { 
+    width: 50%;
+}
+
+.flaming   {
+   
+    margin-top: -4.2rem;
+    text-decoration: none;
+    color: none;
+    transition: none;
+    
+    background:linear-gradient(none);
+}
+
+.menu .flaming::after {
+    text-decoration: none;
+    color: none;
+    transition: none;
+    
+    background:linear-gradient(none);
+}
+
+.menu .flaming:hover::after  {
+    text-decoration: none;
+    color: none;
+    transition: none;
+    background:none;
+}
+.pesquisa{
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* tira as linhas que ficam abaixo dos links */
+    font-size: 1.4 rem;
+    position: relative;
+    padding: 0 5rem .5rem 0;
+}
+
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    font-size: 2rem;
+
+}
+
+
+
+.menuLateral ul li a {
+    width: 40vw;
+    height: 35vh;
+    display: flex;
+    margin-left: 50rem;
+    margin-top: -10rem;
+    text-decoration: none;
+    color: black;
+    
+
+
+}
+
+.aside {
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    margin-left: 50rem;
+    margin-top: -17.5rem;
+    text-decoration: none;
+
+
+}
+
+aside ul li a:hover {
+    color: rgb(112, 126, 126)
+}
+.new{
+    margin-left: 5rem;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.modelosNovos {
+    width: 25vw;
+    height: 30vh; 
+    text-decoration: none;
+    
+}
+
+dl, ol, ul {
+    
+    color: white;
+}
+
+
+
+.footer{
+    width: 45vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 10rem;
+   /*  padding-right: 3rem;
+    padding-top: -18rem; */
+    
+    
+}
+ .contato {
+  flex:1rem;
+  margin-right: -8rem;
+  margin-top: -2.5rem;
+
+}
+
+.contato h2 {
+    margin-right: 50rem;
+}
+
+
+
+.fabricante {
+    flex:1rem;
+    
+    padding-bottom: 25rem;
+    align-items: flex-start; 
+    position: relative;
+    margin-top: -7.5rem;
+    margin-left: 52rem;
+    
+} 
+
+.fabricante ul li {
+    color: black;
+}
+
+
+
+
+
+
+
